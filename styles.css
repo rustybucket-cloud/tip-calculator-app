@@ -4,7 +4,7 @@
     padding: 0;
     font-family: 'Space Mono', sans-serif;
 }
-body {
+main {
     min-height: 100vh;
     background-color: hsl(185, 41%, 84%);
 }
@@ -33,8 +33,8 @@ body {
 }
 #bill, #num-people {
     padding: 0;
-    padding-left: 130px;
-    max-width: calc(100% - 130px);
+    max-width: 5rem;
+    width: auto;
     height: 100%;
     border: none;
     background-color: inherit;
