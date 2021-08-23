@@ -31,23 +31,30 @@ people.addEventListener('input', getInfo);
 bill.addEventListener('change', () => {
     const amount = bill.value;
     bill.value = Number(amount).toFixed(2);
+    if (parseInt(amount) < 0) {
+        bill.value = '';
+    }
 });
 people.addEventListener('change', () => {
     const num = people.value;
     people.value = Math.floor(parseInt(num));
+    if (parseInt(num) < 0) {
+        people.value = '';
+    }
 });
 function getInfo() {
     const billAmount = document.querySelector('#bill').value;
     const numPeople = document.querySelector('#num-people').value;
     let total = null;
     if (billAmount !== '' && numPeople !== '') {
-        total = (parseInt(billAmount) + parseInt(billAmount * tipPercentage)) / parseInt(numPeople);
+        total = (parseInt(billAmount) + (parseInt(billAmount) * tipPercentage)) / parseInt(numPeople);
         const totalResult = document.querySelector('#total');
         totalResult.innerText = `$${Number(total).toFixed(2)}`;
     }
     if (total !== null && numPeople !== '') {
         const tipAmountResult = document.querySelector('#tip-amount');
-        const tipAmount = total / parseInt(numPeople);
+        console.log(tipPercentage);
+        const tipAmount = (parseInt(billAmount) * tipPercentage) / parseInt(numPeople);
         tipAmountResult.innerText = `$${Number(tipAmount).toFixed(2)}`;
     }
 }

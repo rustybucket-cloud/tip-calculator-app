@@ -18,7 +18,7 @@
   <div class="calculator">
     <div class="left">
       <label for="bill">Bill
-        <span class="input"><img src="images/icon-dollar.svg"><input id="bill" type="number" pattern="^\d*(\.\d{0,2})?$" step=".01"></span>
+        <span class="input"><img src="images/icon-dollar.svg"><input id="bill" min="0" type="number" pattern="^\d*(\.\d{0,2})?$" step=".01"></span>
       </label>
 
       <div>
@@ -33,7 +33,7 @@
         </div>
       </div>
       <label for="num-people">Number of People
-        <span class="input"><img class="person-svg" src="images/icon-person.svg"><input type="number" id="num-people"></span>
+        <span class="input"><img class="person-svg" src="images/icon-person.svg"><input type="number" min="0" id="num-people"></span>
       </label>
     </div>
     <div class="right">
