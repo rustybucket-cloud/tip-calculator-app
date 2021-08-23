@@ -40,9 +40,13 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 1rem;
 }
 .left label, .left span {
     display: block;
+}
+.input {
+    margin-top: .35rem;
 }
 #bill, #num-people {
     padding: 0;
@@ -52,7 +56,7 @@ main {
     border: none;
     background-color: inherit;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: hsl(183, 100%, 15%);
     text-align: right;
 }
@@ -60,14 +64,18 @@ main {
     outline: none;
 }
 .left label {
-    color: hsl(184, 14%, 56%);
+    color: hsl(186, 14%, 43%);
+    font-weight: bold;
 }
 .left span {
-    padding: .35rem;
+    padding: .5rem;
+    padding-right: .35rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: hsl(189, 41%, 97%);
     color: hsl(184, 14%, 56%);
+    font-size: 1.5rem;
 }
 .tip-button {
     background-color: hsl(183, 100%, 15%);
