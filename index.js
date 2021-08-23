@@ -47,10 +47,5 @@ function getInfo() {
 
 const reset = document.querySelector('.reset');
 reset.addEventListener("click", () => {
-    bill.value = '';
-    people.value = '';
-    const tipAmountResult = document.querySelector('#tip-amount');
-    const totalResult = document.querySelector('#total');
-    tipAmountResult.innerText = '';
-    totalResult.innerText = '';
+    location.reload();
 });

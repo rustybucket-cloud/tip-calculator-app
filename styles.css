@@ -63,7 +63,7 @@ main {
     color: hsl(184, 14%, 56%);
 }
 .left span {
-    padding: .35rem 0 .35rem .35rem;
+    padding: .35rem;
     display: flex;
     justify-content: space-between;
     background-color: hsl(189, 41%, 97%);
@@ -89,6 +89,10 @@ main {
 #tip-percentages * {
     padding: .25rem 0;
     border-radius: 5px;
+}
+#tip-percentages span {
+    padding-right: .35rem;
+    padding-left: .5rem;
 }
 #custom {
     width: 5rem;
