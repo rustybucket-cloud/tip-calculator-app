@@ -50,7 +50,7 @@ main {
 }
 #bill, #num-people {
     padding: 0;
-    max-width: 5rem;
+    /*max-width: 5rem;*/
     width: auto;
     height: 100%;
     border: none;

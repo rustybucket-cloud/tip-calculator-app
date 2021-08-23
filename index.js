@@ -28,7 +28,10 @@ const bill = document.querySelector('#bill');
 const people = document.querySelector('#num-people');
 bill.addEventListener('input', getInfo);
 people.addEventListener('input', getInfo);
-
+bill.addEventListener('change', () => {
+    const amount = bill.value;
+    bill.value = Number(amount).toFixed(2);
+});
 function getInfo() {
     const billAmount = document.querySelector('#bill').value;
     const numPeople = document.querySelector('#num-people').value;
