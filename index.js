@@ -32,6 +32,10 @@ bill.addEventListener('change', () => {
     const amount = bill.value;
     bill.value = Number(amount).toFixed(2);
 });
+people.addEventListener('change', () => {
+    const num = people.value;
+    people.value = Math.floor(parseInt(num));
+});
 function getInfo() {
     const billAmount = document.querySelector('#bill').value;
     const numPeople = document.querySelector('#num-people').value;
