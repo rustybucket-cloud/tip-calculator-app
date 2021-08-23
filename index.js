@@ -1,19 +1,3 @@
-$(document).ready( () => {
-    const bill = $('#bill');
-    const numPeople = $('#num-people');
-    bill.css('width', '2rem');
-    let billAmount;
-    bill.on('input', ({target}) => {
-        const inputLength = target.value.length;
-        bill.css("width", `${inputLength + 1}rem`);
-    });
-    numPeople.css('width', '2rem');
-    numPeople.on('input', ({target}) => {
-        const inputLength = target.value.length;
-        numPeople.css("width", `${inputLength + 1}rem`);
-    });
-});
-
 let tipPercentage = .15;
 //changes button colors
 const buttons = document.querySelectorAll('.tip-button');
