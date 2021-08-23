@@ -12,46 +12,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <script src="index.js" defer></script>
 </head>
 <body>
 <main>
   <div class="calculator">
     <div class="left">
       <label for="bill">Bill
-        <span>$<input id="bill" type="number"></span>
+        <span>$<input id="bill" type="number" pattern="^\d*(\.\d{0,2})?$" step=".01"></span>
       </label>
 
-      <label>Select Tip %</label>
+      <label class="select-tip">Select Tip %</label>
       <div id="tip-percentages">
-        <button type="button" id="five-percent">5%</button>
-        <button type="button" id="ten-percent">10%</button>
-        <button type="button" id="fifteen-percent">15%</button>
-        <button type="button" id="twenty-five-percent">25%</button>
-        <button type="button" id="fifty-percent">50%</button>
-        <input id="custom" placeholder="Custom">
+        <button type="button" class="tip-button" data-percentage=".05" id="five-percent">5%</button>
+        <button type="button" class="tip-button" data-percentage=".10" id="ten-percent">10%</button>
+        <button type="button" class="tip-button selected" data-percentage=".15" id="fifteen-percent">15%</button>
+        <button type="button" class="tip-button" data-percentage=".25" id="twenty-five-percent">25%</button>
+        <button type="button" class="tip-button" data-percentage=".5" id="fifty-percent">50%</button>
+        <span><input id="custom" placeholder="Custom">%</span>
       </div>
       <label for="num-people">Number of People
-        <span>P<input id="num-people"></span>
+        <span>P<input type="number" id="num-people"></span>
       </label>
     </div>
     <div class="right">
-      <div class="result">
-        <div class="result-label">
-          <p class="result-describer">Tip Amount</p>
-          <p class="per">/ person</p>
+      <div>
+        <div class="result">
+          <div class="result-label">
+            <p class="result-describer">Tip Amount</p>
+            <p class="per">/ person</p>
+          </div>
+          <p id="tip-amount"></p>
         </div>
-        <p id="tip-amount"></p>
-      </div>
-      <div class="result">
-        <div class="result-label">
-          <p class="result-describer">Total</p>
-          <p class="per">/ person </p>
+        <div class="result">
+          <div class="result-label">
+            <p class="result-describer">Total</p>
+            <p class="per">/ person </p>
+          </div>
+          <p id="total"></p>
         </div>
-        <p id="total"></p>
       </div>
-      <button type="button" class="reset">Reset</button>
+      <button type="button" class="reset">RESET</button>
     </div>
   </div>
   <div class="attribution">
@@ -61,4 +61,5 @@
 </main>
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="index.js"></script>
 </html>

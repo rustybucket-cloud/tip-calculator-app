@@ -7,16 +7,21 @@
 main {
     min-height: 100vh;
     background-color: hsl(185, 41%, 84%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .calculator {
     margin: auto;
-    width: 40em;
+    width: 50em;
     display: flex;
-    padding: 1rem;
-    border-radius: 10px;
+    padding: 2rem;
+    border-radius: 15px;
     background-color: white;
     gap: 2rem;
+    height: 22em;
 }
 
 .right, .left {
@@ -26,7 +31,10 @@ main {
     background-color: hsl(183, 100%, 15%);
     color: white;
     border-radius: 10px;
-    padding: 0 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .left label, .left span {
     display: block;
@@ -40,9 +48,14 @@ main {
     background-color: inherit;
     font-weight: bold;
     font-size: 1.1rem;
+    color: hsl(183, 100%, 15%);
+    text-align: right;
 }
 #bill:focus, #num-people:focus {
     outline: none;
+}
+.left label {
+    color: hsl(184, 14%, 56%);
 }
 .left span {
     padding: .25rem 0 .25rem .25rem;
@@ -50,6 +63,61 @@ main {
     justify-content: space-between;
     background-color: hsl(189, 41%, 97%);
     color: hsl(184, 14%, 56%);
+}
+.tip-button {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+}
+.select-tip {
+    padding-top: 1.5rem;
+}
+#tip-percentages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+}
+#tip-percentages * {
+    padding: .25rem 0;
+    border-radius: 5px;
+}
+#custom {
+    width: 5rem;
+    text-align: center;
+    background-color: inherit;
+    border: none;
+    font-size: 1.1rem;
+}
+#custom:focus {
+    outline: none;
+}
+#tip-percentages .selected {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.per {
+    font-size: .8rem;
+    color: hsl(184, 14%, 56%);
+}
+.reset {
+    padding: .75rem;
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.result {
+    display: flex;
+    justify-content: space-between;
+}
+#tip-amount, #total {
+    font-size: 1.5rem;
+    color: hsl(172, 67%, 45%);
 }
 
 .attribution { font-size: 11px; text-align: center; }
