@@ -21,7 +21,7 @@ main {
     border-radius: 15px;
     background-color: white;
     gap: 2rem;
-    height: 22em;
+    min-height: 22em;
 }
 
 .right, .left {
@@ -32,6 +32,11 @@ main {
     color: white;
     border-radius: 10px;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -58,7 +63,7 @@ main {
     color: hsl(184, 14%, 56%);
 }
 .left span {
-    padding: .25rem 0 .25rem .25rem;
+    padding: .35rem 0 .35rem .35rem;
     display: flex;
     justify-content: space-between;
     background-color: hsl(189, 41%, 97%);
@@ -110,6 +115,7 @@ main {
     border-radius: 5px;
     font-size: 1.1rem;
     font-weight: bold;
+    margin-top: 5rem;
 }
 .result {
     display: flex;
@@ -118,6 +124,7 @@ main {
 #tip-amount, #total {
     font-size: 1.5rem;
     color: hsl(172, 67%, 45%);
+    margin-bottom: 5rem;
 }
 
 .attribution { font-size: 11px; text-align: center; }
