@@ -13,6 +13,7 @@ main {
     flex-direction: column;
 }
 
+/*calculator and sides*/
 .calculator {
     margin: auto;
     max-width: 55em;
@@ -32,35 +33,7 @@ main {
 @media screen and (max-width: 815px) {
     .calculator {
         flex-direction: column;
-        /*max-width: 40em;*/
         margin-top: 1rem;
-    }
-}
-@media screen and (max-width: 650px) {
-    .calculator {
-        flex-direction: column;
-        /*max-width: 30em;*/
-        margin-top: 1rem;
-    }
-}
-@media screen and (max-width: 525px) {
-    .calculator {
-        flex-direction: column;
-        /*max-width: 25em;*/
-        margin-top: 1rem;
-    }
-    #bill, #num-people {
-        max-width: 17rem;
-    }
-}
-@media screen and (max-width: 415px) {
-    .calculator {
-        flex-direction: column;
-        /*max-width: 20em;*/
-        margin-top: 1rem;
-    }
-    #bill, #num-people {
-        max-width: 12rem;
     }
 }
 
@@ -90,7 +63,6 @@ main {
 }
 #bill, #num-people {
     padding: 0;
-    /*max-width: 5rem;*/
     width: auto;
     height: 100%;
     border: none;
@@ -100,6 +72,17 @@ main {
     color: hsl(183, 100%, 15%);
     text-align: right;
 }
+@media screen and (max-width: 525px) {
+    #bill, #num-people {
+        max-width: 17rem;
+    }
+}
+@media screen and (max-width: 415px) {
+    #bill, #num-people {
+        max-width: 12rem;
+    }
+}
+
 #bill:focus, #num-people:focus {
     outline: none;
 }
