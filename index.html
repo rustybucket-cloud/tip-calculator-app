@@ -21,14 +21,16 @@
         <span>$<input id="bill" type="number" pattern="^\d*(\.\d{0,2})?$" step=".01"></span>
       </label>
 
-      <label class="select-tip">Select Tip %</label>
-      <div id="tip-percentages">
-        <button type="button" class="tip-button" data-percentage=".05" id="five-percent">5%</button>
-        <button type="button" class="tip-button" data-percentage=".10" id="ten-percent">10%</button>
-        <button type="button" class="tip-button selected" data-percentage=".15" id="fifteen-percent">15%</button>
-        <button type="button" class="tip-button" data-percentage=".25" id="twenty-five-percent">25%</button>
-        <button type="button" class="tip-button" data-percentage=".5" id="fifty-percent">50%</button>
-        <span><input id="custom" placeholder="Custom">%</span>
+      <div>
+        <label class="select-tip">Select Tip %</label>
+        <div id="tip-percentages">
+          <button type="button" class="tip-button" data-percentage=".05" id="five-percent">5%</button>
+          <button type="button" class="tip-button" data-percentage=".10" id="ten-percent">10%</button>
+          <button type="button" class="tip-button selected" data-percentage=".15" id="fifteen-percent">15%</button>
+          <button type="button" class="tip-button" data-percentage=".25" id="twenty-five-percent">25%</button>
+          <button type="button" class="tip-button" data-percentage=".5" id="fifty-percent">50%</button>
+          <span><input id="custom" placeholder="Custom">%</span>
+        </div>
       </div>
       <label for="num-people">Number of People
         <span>P<input type="number" id="num-people"></span>
